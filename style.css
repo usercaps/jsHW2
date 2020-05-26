@@ -1,0 +1,23 @@
+span{
+    color: red;
+}
+.img__aboutme img{
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+}
+.text__aboutme{
+    text-align: center;
+    padding-top: 100px;
+    max-width: 100%;
+    width: 300px;
+    text-transform: uppercase;
+    color: brown;
+    border: 5px solid brown;
+    border-radius: 50%;
+}
+#flex-aboutMe{
+    max-width: 100%;
+    flex-direction: row;
+}

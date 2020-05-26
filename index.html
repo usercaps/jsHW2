@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Todo-application</h1>
+
+    <section id="todo">
+        <input id="empt" type="text" placeholder="Введите задачу" >
+        <ul id="list">
+        </ul>
+        <div class="buttons">
+        <button id="save">Сохранить все</button>
+        <button id="clear">Очистить все</button>
+        <br>
+        <button id="about" onclick="aboutmeBtn()"><b>Информация о себе</b></button>
+        </div> 
+        <div id="flex__aboutMe" style="display: none;">
+             <div class="img__aboutme col-6">
+                 <img src="./images/me.jpg" alt="me">
+             </div>
+            <div class="text__aboutme col-6">
+                <p>невдах</p>
+                <p>сергей</p>
+                <p>андреевич</p>
+            </div>
+         </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
