@@ -27,14 +27,17 @@ dataInput.addEventListener('keypress', function(keyPressed){
     if(keyPressed.which === 13){
         var newLi = document.createElement('li');
         var newSpan = document.createElement('span');
-       
         newSpan.innerHTML = 'Delete ';
+        let now = new Date();
         
-        var newTodo = this.value; // сбор текущего value из input
+        var newTodo = this.value; // получение value из input
         this.value = '';
-
-        ulSpisok.appendChild(newLi).append(newSpan, newTodo);
         
+        ulSpisok.appendChild(newLi).append(newSpan, newTodo + " [", now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + "]");
+
+            // для даты хватит и now.getDate()
+        // проверка на пустое окно
+        ulSpisok.appendChild(newLi).trim();
         deleteTodo();
     }
 });
@@ -72,4 +75,3 @@ function aboutmeBtn(){
         about.style.display = 'none';
     }
 };
-// проверка на пустое окно
