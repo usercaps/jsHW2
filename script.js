@@ -3,7 +3,6 @@ var ulSpisok = document.getElementById("list");
 var spans = document.getElementsByTagName('span');
 var saveBtn = document.getElementById('save');
 var clearBtn = document.getElementById('clear');
-var lis = document.getElementsByTagName('li');
 
 
 function deleteTodo(){
@@ -13,18 +12,23 @@ function deleteTodo(){
             event.preventDefault();
         })
     }
-}
+};
 
 function loadTodo(){
-    if(localStorage.getItem('todoApplication')){
-        ulSpisok.innerHTML = localStorage.getItem('todoApplication');
+    if(localStorage.getItem('todoAplication')){
+        ulSpisok.innerHTML = localStorage.getItem('todoAplication');
         deleteTodo();
+        strike();
     }
 };
 // addEventListener - обработчик событий с последующим вызовом функции
 
 dataInput.addEventListener('keypress', function(keyPressed){
     if(keyPressed.which === 13){
+        if (dataInput.value.trim() === ""){
+           alert('Пустая строка');
+        }
+        else {
         var newLi = document.createElement('li');
         var newSpan = document.createElement('span');
         newSpan.innerHTML = 'Delete ';
@@ -37,13 +41,13 @@ dataInput.addEventListener('keypress', function(keyPressed){
 
             // для даты хватит и now.getDate()
         // проверка на пустое окно
-        ulSpisok.appendChild(newLi).trim();
         deleteTodo();
-    }
+        strike();
+    }}
 });
 
 saveBtn.addEventListener('click', function(){
-    localStorage.setItem('todoApplication', ulSpisok.innerHTML)
+    localStorage.setItem('todoAplication', ulSpisok.innerHTML);
 });
 clearBtn.addEventListener('click', function(){
     ulSpisok.innerHTML = '';
@@ -56,14 +60,14 @@ loadTodo();
 
 
 function strike(){
-    for(let li of lis){
-        li.addEventListener('click', function(){
-            li.style.textDecoration = 'line-through';
-            event.preventDefault();
-        })
+    let li = document.getElementsByTagName('li');
+    for(let list of li){
+        list.addEventListener('click', function(){
+            this.style.textDecoration = 'line-through';
+        });
     }
 };
-strike();
+
 
 // кнопка добавляющая модальное окно 
 let about = document.getElementById("flex__aboutMe");

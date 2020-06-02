@@ -11,8 +11,8 @@
 <body>
     <h1>Todo-application</h1>
 
-    <section id="todo">
-        <input id="empt" type="text" placeholder="Введите задачу" >
+    <section id="todo" class="todo">
+        <input class="input" type="text" placeholder="Введите задачу" >
         <ul id="list">
         </ul>
         <div class="buttons">
@@ -21,17 +21,18 @@
         <br>
         <button id="about" onclick="aboutmeBtn()"><b>Информация о себе</b></button>
         </div> 
-        <div id="flex__aboutMe" style="display: none;">
-             <div class="img__aboutme col-6">
-                 <img src="./images/me.jpg" alt="me">
-             </div>
-            <div class="text__aboutme col-6">
-                <p>невдах</p>
-                <p>сергей</p>
-                <p>андреевич</p>
-            </div>
-         </div>
+        
     </section>
+    <div id="flex__aboutMe" style="display: none;">
+        <div class="img__aboutme col-6">
+            <img src="./images/me.jpg" alt="me">
+        </div>
+       <div class="text__aboutme col-6">
+           <p>невдах</p>
+           <p>сергей</p>
+           <p>андреевич</p>
+       </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>

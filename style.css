@@ -1,6 +1,24 @@
 span{
     color: red;
 }
+h1{
+    text-align: center;
+}
+.todo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.buttons{
+    margin-left: 10px;
+}
+.input{
+    margin-right: 10px;
+    text-align: center;
+}
+ul{
+    padding-inline-start: 20px;
+}
 .img__aboutme img{
     max-width: 100%;
     width: 300px;
@@ -17,7 +35,14 @@ span{
     border: 5px solid brown;
     border-radius: 50%;
 }
-#flex-aboutMe{
+#flex__aboutMe{
     max-width: 100%;
     flex-direction: row;
+    justify-content: center;
+}
+#about{
+    margin-top: 10px;
+}
+.cross{
+    text-decoration: line-through;
 }
